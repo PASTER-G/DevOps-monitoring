@@ -12,14 +12,14 @@
 ```
 .
 ├── applications/
-│ ├── app.py # *Python Flask приложение*
-│ ├── Dockerfile # *Docker образ приложения*
-│ └── requirements.txt # *Зависимости Python*
+│ ├── app.py # Python Flask приложение
+│ ├── Dockerfile # Docker образ приложения
+│ └── requirements.txt # Зависимости Python
 ├── terraform/
-│ ├── main.tf # *Основная конфигурация Terraform*
-│ ├── kube-prometheus-stack.tf # *Helm чарт для стека мониторинга*
-│ ├── test-application.tf # *Ресурсы Kubernetes для тестового приложения*
-│ ├── .gitignore # *Правила Git ignore для Terraform*
+│ ├── main.tf # Основная конфигурация Terraform
+│ ├── kube-prometheus-stack.tf # Helm чарт для стека мониторинга
+│ ├── test-application.tf # Ресурсы Kubernetes для тестового приложения
+│ ├── .gitignore # Правила Git ignore для Terraform*
 └── README.md
 ```
 ## Предварительные требования
