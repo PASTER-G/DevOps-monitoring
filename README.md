@@ -30,19 +30,38 @@
 - Terraform
 
 ## Использование
-
-1. Запустите Minikube: `minikube start`
-2. Соберите образ приложения: `docker build -t test-monitored-app:latest ./applications/`
-3. Примените конфигурацию Terraform:
+1. Клонируйте репозиторий:
+```bash
+git clone https://github.com/PASTER-G/DevOps-monitoring.git
+cd DevOps-monitoring
 ```
+2. Запустите Minikube: 
+```bash
+minikube start
+```
+3. Соберите образ приложения: 
+```bash
+docker build -t test-monitored-app:latest ./applications/
+```
+4. Примените конфигурацию Terraform:
+```bash
 cd terraform
 terraform init
 terraform apply
 ```
-4. Получите доступ к сервисам:
-- Grafana: `kubectl port-forward -n monitoring svc/kube-prometheus-stack-grafana 8080:80`
-- Prometheus: `kubectl port-forward -n monitoring svc/kube-prometheus-stack-prometheus 9090:9090`
-- Тестовое приложение: `kubectl port-forward svc/test-monitored-app-service 5000:5000`
+5. Получите доступ к сервисам:
+- Grafana: 
+```bash
+kubectl port-forward -n monitoring svc/kube-prometheus-stack-grafana 8080:80
+```
+- Prometheus: 
+```bash
+kubectl port-forward -n monitoring svc/kube-prometheus-stack-prometheus 9090:9090
+```
+- Тестовое приложение: 
+```bash
+kubectl port-forward svc/test-monitored-app-service 5000:5000
+```
 
 ## Метрики
 
